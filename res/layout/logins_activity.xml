@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="@drawable/au_center"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <TextView
+        android:id="@+id/login_toast"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:text="请输入手势密码"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tv_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/red" />
+
+    <com.td.qianhai.epay.bb.unlock.LocusPassWordView
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/mLocusPassWordView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.td.qianhai.epay.bb.unlock.LocusPassWordView>
+
+    <Button
+        android:id="@+id/tvNoSetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn02_bg"
+        android:gravity="center"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="设置手势密码"
+        android:textColor="@android:color/white"
+        android:visibility="gone" >
+    </Button>
+
+    <TextView
+        android:id="@+id/tv_user_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="帐号登录 >"
+        android:textColor="@drawable/text_color_focus"
+        android:textSize="15dp" />
+
+</FrameLayout>

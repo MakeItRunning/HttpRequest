@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<!--  android:background="@drawable/aut_bg1" -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/transparent" >
+
+        <TextView
+            android:id="@id/bt_title_left"
+            style="@style/title_back_btn_bg_theme2"
+            android:drawableLeft="@drawable/title_back_btn_bg2"
+            android:text="返回" />
+
+        <TextView
+            android:id="@id/tv_title_contre"
+            style="@style/title_text_theme"
+            android:text="登录" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/au_first" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingTop="30dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_air_lin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/gray_air"
+                        android:text="姓      名:"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/re_name"
+                        android:layout_width="match_parent"
+                        android:hint="请输入您本人姓名"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/applin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/gray_air"
+                        android:text="身份证号:"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/re_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                         android:hint="请输入您本人身份证号码"
+                         android:digits="1234567890xXQWERTYUIOPASDFGHJKLZCVBNM"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_air_lin" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/au_pro" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_au_button"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="80dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/aut_button_ps"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="@color/apptitle_oem" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

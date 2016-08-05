@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sky1" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="50dp" >
+
+        <ImageView
+            android:id="@+id/blue_bgs"
+            android:layout_width="280dp"
+            android:layout_height="160dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blue_bgs"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/apptitle"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="100dp" -->
+    <!-- android:layout_height="100dp" -->
+    <!-- android:src="@drawable/login_logo_top" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="100dp" -->
+    <!-- android:layout_height="100dp" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:src="@drawable/login_logo_bottom" /> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/mian_text" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@+id/blue_bgs" -->
+    <!-- android:layout_centerHorizontal="true" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:text="您 的 移 动 财 富" -->
+    <!-- android:textColor="@color/white" -->
+    <!-- android:textSize="16dp" /> -->
+
+
+    <!-- <com.td.qianhai.epay.views.MyGifView2 -->
+    <!-- android:id="@+id/mygif" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" /> -->
+
+    <ProgressBar
+        android:id="@+id/loading_process_dialog_progressBar"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="210.0dip"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@anim/loading"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+-dontusemixedcaseclassnames  
+-dontskipnonpubliclibraryclasses  
+-verbose  
+-ignorewarnings 
+
+-renamesourcefileattribute MyApplication
+-keepattributes SourceFile,LineNumberTable
+# pos
+-keep class com.xss.readcard.*{*;}
+-dontwarn com.hp.hpl.sparta.**
+-keep class com.hp.hpl.sparta.*{*;}
+-dontwarn com.hp.hpl.sparta.xpath.**
+-keep class com.hp.hpl.sparta.xpath.*{*;}
+-dontwarn demo.**
+-keep class demo.*{*;}
+-dontwarn net.sourceforge.pinyin4j.**
+-keep class net.sourceforge.pinyin4j.*{*;}
+-dontwarn net.sourceforge.pinyin4j.format.**
+-keep class net.sourceforge.pinyin4j.format.*{*;}
+-dontwarn net.sourceforge.pinyin4j.format.exception.**
+-keep class net.sourceforge.pinyin4j.format.exception.*{*;}
+# activation
+-dontwarn com.sun.activation.registries.**
+-keep class com.sun.activation.registries.*{*;}
+-dontwarn javax.activation.**
+-keep class javax.activation.*{*;}
+# javax.mail
+-dontwarn com.sun.mail.auth.**
+-keep class com.sun.mail.auth.*{*;}
+-dontwarn com.sun.mail.handlers.**
+-keep class com.sun.mail.handlers.*{*;}
+-dontwarn com.sun.mail.iap.**
+-keep class com.sun.mail.iap.*{*;}
+-dontwarn com.sun.mail.imap.**
+-keep class com.sun.mail.imap.*{*;}
+-dontwarn com.sun.mail.imap.protocol.**
+-keep class com.sun.mail.imap.protocol.*{*;}
+-dontwarn com.sun.mail.pop3.**
+-keep class com.sun.mail.pop3.*{*;}
+-dontwarn com.sun.mail.smtp.**
+-keep class com.sun.mail.smtp.*{*;}
+-dontwarn com.sun.mail.util.**
+-keep class com.sun.mail.util.*{*;}
+-dontwarn com.sun.mail.util.logging.**
+-keep class com.sun.mail.util.logging.*{*;}
+-dontwarn javax.mail.**
+-keep class javax.mail.*{*;}
+-dontwarn javax.mail.event.**
+-keep class javax.mail.event.*{*;}
+-dontwarn javax.mail.internet.**
+-keep class javax.mail.internet.*{*;}
+-dontwarn javax.mail.search.**
+-keep class javax.mail.search.*{*;}
+-dontwarn javax.mail.util.**
+-keep class javax.mail.util.*{*;}
+# additionnal
+-dontwarn myjava.awt.datatransfer.**
+-keep class myjava.awt.datatransfer.*{*;}
+-dontwarn org.apache.harmony.awt.**
+-keep class org.apache.harmony.awt.*{*;}
+-dontwarn org.apache.harmony.awt.datatransfer.**
+-keep class org.apache.harmony.awt.datatransfer.*{*;}
+-dontwarn org.apache.harmony.awt.internal.nls.**
+-keep class org.apache.harmony.awt.internal.nls.*{*;}
+-dontwarn org.apache.harmony.misc.**
+-keep class org.apache.harmony.misc.*{*;}
+
+# commons-httpclient
+-dontwarn org.apache.commons.httpclient.**
+-dontwarn org.apache.commons.httpclient.auth.**
+-dontwarn org.apache.commons.httpclient.cookie.**
+-dontwarn org.apache.commons.httpclient.methods.**
+-dontwarn org.apache.commons.httpclient.methods.multipart.**
+-dontwarn org.apache.commons.httpclient.params.**
+-dontwarn org.apache.commons.httpclient.protocol.**
+-dontwarn org.apache.commons.httpclient.util.**
+-dontwarn com.td.qianhai.mpay.utils.**
+
+
+-keep class org.apache.commons.httpclient.*{*;}
+-keep class org.apache.commons.httpclient.auth.*{*;}
+-keep class org.apache.commons.httpclient.cookie.*{*;}
+-keep class org.apache.commons.httpclient.methods.*{*;}
+-keep class org.apache.commons.httpclient.methods.multipart.*{*;}
+-keep class org.apache.commons.httpclient.params.*{*;}
+-keep class org.apache.commons.httpclient.protocol.*{*;}
+-keep class org.apache.commons.httpclient.util.*{*;}
+-keep class com.td.qianhai.mpay.utils.*{*;}
+# R
+-keep class **.R$* {*;}
+
+-dontshrink
+-dontoptimize
+-dontwarn com.google.android.maps.**
+-dontwarn android.webkit.WebView
+-dontwarn com.umeng.**
+-dontwarn com.tencent.weibo.sdk.**
+-dontwarn com.facebook.**
+
+-libraryjars libs/SocialSDK_QQZone_2.jar
+-libraryjars libs/pushservice-4.3.0.4.jar
+
+-libraryjars libs/umeng-analytics-v5.4.2.jar
+
+-keep class com.baidu.**{*; } 
+-dontwarn com.baidu.** 
+
+-keep enum com.facebook.**
+-keepattributes Exceptions,InnerClasses,Signature
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+
+-keep public interface com.facebook.**
+-keep public interface com.tencent.**
+-keep public interface com.umeng.socialize.**
+-keep public interface com.umeng.socialize.sensor.**
+-keep public interface com.umeng.scrshot.**
+
+-keep public class com.umeng.socialize.* {*;}
+-keep public class javax.**
+-keep public class android.webkit.**
+
+-keep class com.facebook.**
+-keep class com.umeng.scrshot.**
+-keep public class com.tencent.** {*;}
+-keep class com.umeng.socialize.sensor.**
+
+-keep class com.tencent.mm.sdk.modelmsg.WXMediaMessage {*;}
+
+-keep class com.tencent.mm.sdk.modelmsg.** implements com.tencent.mm.sdk.modelmsg.WXMediaMessage$IMediaObject {*;}
+
+-keep class im.yixin.sdk.api.YXMessage {*;}
+-keep class im.yixin.sdk.api.** implements im.yixin.sdk.api.YXMessage$YXMessageData{*;}
+
+-keep public class [your_pkg].R$*{
+    public static final int *;
+}
+

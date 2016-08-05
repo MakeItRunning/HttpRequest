@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.td.qianhai.epay.bb"
+    android:versionCode="14"
+    android:versionName="1.1.3" >
+
+    <!--
+         1、应用程序安装不能小于版本8
+    	 2、如果应用程序等于8那么可以很好的运行
+    -->
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="19" />
+    <!--
+         1、指明应用程序是否包含了能够适用于任何屏幕密度的资源
+    	 2、指示应用程序是否支持较大外形的屏幕
+    	 3、指示应用程序是否支持普通外形的屏幕
+    	 4、指定应用程序是否支持较小外形的屏幕
+    -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <!-- 允许应用程序更改主屏幕中的设置和快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" /> 
+    <!-- 允许应用访问联系人通讯录信息 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写入联系人，但不可读取 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 访问网络连接，可能产生GPRS流量 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 通过WiFi或移动基站的方式获取用户错略的经纬度信息，定位精度大概误差在30~1500米 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 允许程序写入外部存储，如SD卡上写文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 重新排序系统Z轴运行中的任务 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <!-- 允许程序获取当前或最近运行的应用 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取当前WiFi接入的状态以及WLAN热点的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 改变网络状态如是否能联网 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 改变WiFi状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 允许访问摄像头进行拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 获取当前活动的activity与实例的方法 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    
+        <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    
+    <!-- <uses-permission android:name="android.permission.SET_DEBUG_APP" /> -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <permission android:name="com.td.qianhai.epay.bb.permission.JPUSH_MESSAGE"/>
+  	<uses-permission android:name="com.td.qianhai.epay.bb.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    
+    <!--since 1.6.0 -->
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- 自定义权限 最低权限 -->
+<!--     <permission -->
+<!--         android:name="oem.permission.SENDMAIL" -->
+<!--         android:protectionLevel="normal" > -->
+<!--     </permission> -->
+
+    <!--
+         1、是否允许应用程序备份和恢复
+         2、防止Application被杀掉
+    	 3、应用程序图标
+    	 4、应用程序名称
+    	 5、主题样式    -->
+    <application
+        android:name="com.td.qianhai.epay.bb.beans.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/ico"
+        android:label="@string/app_namebeta"
+        android:persistent="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.td.qianhai.epay.bb.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+
+<!--         黑屏广播注册 -->
+<!--         <receiver android:name="com.td.qianhai.epay.broadcast.ScreenBroadcastReceiver" > -->
+<!--             <intent-filter android:priority="20" > -->
+<!--                 <action android:name="android.intent.action.SCREEN_ON" /> -->
+<!--                 <action android:name="android.intent.action.SCREEN_OFF" /> -->
+<!--                 <action android:name="android.intent.action.USER_PRESENT" /> -->
+<!--             </intent-filter> -->
+<!--         </receiver> -->
+
+        <!-- 网络dialogActivity -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.NetworkRemindDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/networkDialog" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RequestPhonenumberChengesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RequestCardInfoChangeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!--
+        <activity
+            android:name=".MenuActivity"
+            android:screenOrientation="portrait" >
+        </activity>        -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RegetPwActivity"
+            android:label="@string/title_activity_reget_pw"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RegetPasswordtwoActivity"
+            android:label="@string/title_activity_reget_passwordtwo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RevisePasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BussinessInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" >
+        </activity>
+        <!-- android:windowSoftInputMode=stateVisible取消输入法 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.ReviseBankInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AccountManageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RealNameAuthenticationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BalanceQueryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BalanceQueryResultActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BossReceiveActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.UploadSignActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.DealRecordsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RevokePayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.HelpActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.HelpVersionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.td.qianhai.epay.bb.CameraActivity" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.PhoneRechargeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.ContactmanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.PhoneRechargeAffirmActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.KeyboardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.SwipingPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirTicketActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirTicketMainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirFourActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirThirdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirAirportActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.CalendarActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AddPassengers"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AircraftInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AircraftSingleInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AircraftRoundInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.CabinlistActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirContactActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AlterNameAndPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirInsuranceOptionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.AirItineraryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.TrainTicketActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.DealRecordresultActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.UserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.MenuActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.fragmentmanager.FmMainActivity"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.OrderPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.SelectListNameActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 添加钱包 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.RichTreasureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 添加钱包内修改支付密码 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.UpdatePayPassActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 按日期 查询 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.RichTreasureDealRecordsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 查询结果 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.RichTreasureDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 找回支付密码 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.RegSetPayPassActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 找回支付密码 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.RegetPayPwActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.IntoBasisActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.WithdrawalActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.CurrentAccountInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.IntoModelListActiviy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BasisActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BasisDetailedInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.OnlineWeb"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设 置字符密码 -->
+        <activity
+            android:name="com.td.qianhai.epay.bb.SetPayPassActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.MainActivitys"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.OderOverDeteilActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.MentionNowAcitvity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.CameraActivity2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.unlock.SetUnlockPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.unlock.UnlockActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.unlock.UnlockLoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BalanceDetailsAcitvity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.TransferAccountsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RateListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.QrCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.RateMianActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.FeedbackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.OrderInfoAcitvity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.MyCircleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.CreditToActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.CreditToDetileActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.CreditCardResultActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.CreditToDetileActivity1"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+         <activity
+            android:name="com.td.qianhai.epay.bb.EpayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.NewRealNameAuthenticationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.PayMainActivity"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.LastOderAvtivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.GuidelinesActivity"
+            android:theme="@style/ChoolsePhotoStyleBottoms"
+            android:screenOrientation="portrait" >
+        </activity>  
+         <activity
+            android:name="com.td.qianhai.epay.bb.PremiumUpgradeActivity"
+            android:screenOrientation="portrait" >
+        </activity>  
+        <activity
+            android:name="com.td.qianhai.epay.bb.AgentManageActivity"
+            android:screenOrientation="portrait" >
+        </activity>  
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.MyBankCardAvtivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.TakeCreditCardActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.NewAgentActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+         <activity
+            android:name="com.td.qianhai.epay.bb.ActivationCodeManageActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.AgentListActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.ActCodeListActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.WelcomeActivity"
+            android:screenOrientation="portrait" 
+            android:theme="@style/WelTheme">
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.ChargingrRulesActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.ChooseBankActivity"
+            android:theme="@style/ChoolsePhotoStyleBottoms"
+            android:screenOrientation="portrait" >
+        </activity> 
+         
+         <activity
+            android:name="com.td.qianhai.epay.bb.MyProfitActivity"
+            android:screenOrientation="portrait" >
+         </activity>
+         
+         <activity
+            android:name="com.td.qianhai.epay.bb.PromotionEarningActivity"
+            android:screenOrientation="portrait" >
+         </activity> 
+         
+         <activity
+            android:name="com.td.qianhai.epay.bb.DistributorActivity"
+            android:screenOrientation="portrait" >
+         </activity> 
+         <activity
+            android:name="com.td.qianhai.epay.bb.WebViewActivity"
+            android:screenOrientation="portrait" >
+         </activity> 
+         
+        <activity
+            android:name="com.td.qianhai.epay.bb.FinancialProductsActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.PurchaseProductsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.BalanceDetailsAcitvity1"
+            android:screenOrientation="portrait" >
+        </activity>  
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.SavpayActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.CompleteInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>  
+        <activity
+            android:name="com.td.qianhai.epay.bb.MyProfitActivitys"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.BuyCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>   
+        <activity
+            android:name="com.td.qianhai.epay.bb.AgentListActivity1"
+            android:screenOrientation="portrait" >
+        </activity> 
+        <activity
+            android:name="com.td.qianhai.epay.bb.SelectBankActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.MyCircleActivity1"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.ConvenienceServicesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5715f75e67e58e48fa000d6e" />
+
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.td.qianhai.epay.bb.qrcode.CaptureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1104231525" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.IntroductionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChoolsePhotoStyleBottoms" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.PictureActivitys"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.MyQrcard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.PhonereChargeActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.ShouKuanBAvtivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+                
+         <activity
+            android:name="com.td.qianhai.epay.bb.push.CustomActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden" >
+        </activity>
+        
+         <activity
+            android:name="com.td.qianhai.epay.bb.MyProxyReturnActivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        <activity
+            android:name="com.td.qianhai.epay.bb.HaiGouAvtivity"
+            android:screenOrientation="portrait" >
+        </activity> 
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.AuthenticationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.AuthenticationActivity1"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.Authenticationactivity2"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.ScreeningActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.AuthenticationActivity3"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.WechatCollectionRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.RecommendeddetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.td.qianhai.epay.bb.PointActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.SubMyCircleActivity1"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.WeChatRegistrActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.ContactsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.MyFriendListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.td.qianhai.epay.bb.AddNewFriendActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+         <activity
+            android:name="com.td.qianhai.epay.bb.FriendsInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+<!--                  push应用定义消息receiver声明 -->
+<!--         <receiver android:name="com.td.qianhai.epay.bb.push.MyPushMessageReceiver"> -->
+<!--             <intent-filter> -->
+<!--                 接收push消息 -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.MESSAGE" /> -->
+<!--                 接收bind,unbind,fetch,delete等反馈消息 -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.RECEIVE" /> -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.notification.CLICK" /> -->
+<!--             </intent-filter> -->
+<!--         </receiver> -->
+                
+                
+<!--         push必须的receviver和service声明 -->
+<!--         <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" -->
+<!--             android:process=":bdservice_v1"> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+<!--                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.notification.SHOW" /> -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.media.CLICK" /> -->
+<!-- 		<action android:name="android.intent.action.MEDIA_MOUNTED" /> -->
+<!-- 		<action android:name="android.intent.action.USER_PRESENT" /> -->
+<!-- 		<action android:name="android.intent.action.ACTION_POWER_CONNECTED" /> -->
+<!-- 		<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" /> -->
+<!--             </intent-filter> -->
+<!--         </receiver> -->
+        
+        
+<!--         <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" -->
+<!--             android:process=":bdservice_v1"> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.METHOD" /> -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" /> -->
+<!--             </intent-filter> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.PACKAGE_REMOVED"/> -->
+<!--                 <data android:scheme="package" /> -->
+<!--             </intent-filter>                    -->
+<!--         </receiver> -->
+<!--         <service -->
+<!--             android:name="com.baidu.android.pushservice.PushService" -->
+<!--             android:exported="true" -->
+<!--             android:process=":bdservice_v1"  > -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" /> -->
+<!--             </intent-filter> -->
+<!--         </service> -->
+<!--         push结束 -->
+        
+<!--         <meta-data android:name="api_key" android:value="zhqt4hB7383nndIdF3GBVymx" /> -->
+                
+<!--     </application> -->
+    
+    
+
+    
+            <activity android:name="com.td.qianhai.epay.bb.push.TestActivity" >
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>  
+
+     
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden" 
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.td.qianhai.epay.bb" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+    
+        
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+                
+            </intent-filter>
+        </service>
+        
+        <!-- Required SDK 核心功能-->
+        <service 
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.td.qianhai.epay.bb"/>
+            </intent-filter>
+        </service>
+        
+        
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+             <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.td.qianhai.epay.bb" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+             <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+   
+        </receiver>
+        
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.td.qianhai.epay.bb.push.MyReceiver" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />  
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.td.qianhai.epay.bb" />
+            </intent-filter>
+        </receiver>
+ 
+        
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="2f9311396e7ac50613a3dbf7" /> <!--  </>值来自开发者平台取得的AppKey-->
+    </application>
+    
+    
+</manifest>

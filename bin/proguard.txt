@@ -1,0 +1,546 @@
+# view res/layout/activity_premium_upgrade.xml #generated:85
+# view res/layout/activity_welcome.xml #generated:7
+# view res/layout/deal_record_result.xml #generated:48
+# view res/layout/pay_main_activity.xml #generated:82
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:927
+-keep class cn.jpush.android.service.AlarmReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:893
+-keep class cn.jpush.android.service.DaemonService { <init>(...); }
+
+# view AndroidManifest.xml #generated:871
+-keep class cn.jpush.android.service.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:905
+-keep class cn.jpush.android.service.PushReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:879
+-keep class cn.jpush.android.service.PushService { <init>(...); }
+
+# view AndroidManifest.xml #generated:860
+-keep class cn.jpush.android.ui.PushActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:195
+-keep class com.td.qianhai.epay.bb.AccountManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:554
+-keep class com.td.qianhai.epay.bb.ActCodeListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:544
+-keep class com.td.qianhai.epay.bb.ActivationCodeManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:784
+-keep class com.td.qianhai.epay.bb.AddNewFriendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:286
+-keep class com.td.qianhai.epay.bb.AddPassengers { <init>(...); }
+
+# view AndroidManifest.xml #generated:549
+-keep class com.td.qianhai.epay.bb.AgentListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:627
+-keep class com.td.qianhai.epay.bb.AgentListActivity1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:524
+-keep class com.td.qianhai.epay.bb.AgentManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:278
+-keep class com.td.qianhai.epay.bb.AirAirportActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:306
+-keep class com.td.qianhai.epay.bb.AirContactActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:266
+-keep class com.td.qianhai.epay.bb.AirFourActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:314
+-keep class com.td.qianhai.epay.bb.AirInsuranceOptionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:318
+-keep class com.td.qianhai.epay.bb.AirItineraryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:270
+-keep class com.td.qianhai.epay.bb.AirOrderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:274
+-keep class com.td.qianhai.epay.bb.AirThirdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:258
+-keep class com.td.qianhai.epay.bb.AirTicketActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:262
+-keep class com.td.qianhai.epay.bb.AirTicketMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:290
+-keep class com.td.qianhai.epay.bb.AircraftInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:298
+-keep class com.td.qianhai.epay.bb.AircraftRoundInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:294
+-keep class com.td.qianhai.epay.bb.AircraftSingleInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:310
+-keep class com.td.qianhai.epay.bb.AlterNameAndPhoneActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:725
+-keep class com.td.qianhai.epay.bb.AuthenticationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:730
+-keep class com.td.qianhai.epay.bb.AuthenticationActivity1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:745
+-keep class com.td.qianhai.epay.bb.AuthenticationActivity3 { <init>(...); }
+
+# view AndroidManifest.xml #generated:735
+-keep class com.td.qianhai.epay.bb.Authenticationactivity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:442
+-keep class com.td.qianhai.epay.bb.BalanceDetailsAcitvity { <init>(...); }
+
+# view AndroidManifest.xml #generated:605
+-keep class com.td.qianhai.epay.bb.BalanceDetailsAcitvity1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:203
+-keep class com.td.qianhai.epay.bb.BalanceQueryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:208
+-keep class com.td.qianhai.epay.bb.BalanceQueryResultActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:397
+-keep class com.td.qianhai.epay.bb.BasisActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:401
+-keep class com.td.qianhai.epay.bb.BasisDetailedInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:212
+-keep class com.td.qianhai.epay.bb.BossReceiveActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:184
+-keep class com.td.qianhai.epay.bb.BussinessInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:623
+-keep class com.td.qianhai.epay.bb.BuyCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:302
+-keep class com.td.qianhai.epay.bb.CabinlistActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:282
+-keep class com.td.qianhai.epay.bb.CalendarActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:236
+-keep class com.td.qianhai.epay.bb.CameraActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:426
+-keep class com.td.qianhai.epay.bb.CameraActivity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:565
+-keep class com.td.qianhai.epay.bb.ChargingrRulesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:570
+-keep class com.td.qianhai.epay.bb.ChooseBankActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:615
+-keep class com.td.qianhai.epay.bb.CompleteInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:242
+-keep class com.td.qianhai.epay.bb.ContactmanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:774
+-keep class com.td.qianhai.epay.bb.ContactsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:641
+-keep class com.td.qianhai.epay.bb.ConvenienceServicesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:486
+-keep class com.td.qianhai.epay.bb.CreditCardResultActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:477
+-keep class com.td.qianhai.epay.bb.CreditToActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:481
+-keep class com.td.qianhai.epay.bb.CreditToDetileActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:491
+-keep class com.td.qianhai.epay.bb.CreditToDetileActivity1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:389
+-keep class com.td.qianhai.epay.bb.CurrentAccountInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:326
+-keep class com.td.qianhai.epay.bb.DealRecordresultActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:220
+-keep class com.td.qianhai.epay.bb.DealRecordsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:586
+-keep class com.td.qianhai.epay.bb.DistributorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:496
+-keep class com.td.qianhai.epay.bb.EpayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:462
+-keep class com.td.qianhai.epay.bb.FeedbackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:595
+-keep class com.td.qianhai.epay.bb.FinancialProductsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:789
+-keep class com.td.qianhai.epay.bb.FriendsInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:515
+-keep class com.td.qianhai.epay.bb.GuidelinesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:720
+-keep class com.td.qianhai.epay.bb.HaiGouAvtivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:228
+-keep class com.td.qianhai.epay.bb.HelpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:232
+-keep class com.td.qianhai.epay.bb.HelpVersionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:381
+-keep class com.td.qianhai.epay.bb.IntoBasisActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:393
+-keep class com.td.qianhai.epay.bb.IntoModelListActiviy { <init>(...); }
+
+# view AndroidManifest.xml #generated:687
+-keep class com.td.qianhai.epay.bb.IntroductionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:250
+-keep class com.td.qianhai.epay.bb.KeyboardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:511
+-keep class com.td.qianhai.epay.bb.LastOderAvtivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:162
+-keep class com.td.qianhai.epay.bb.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:119
+-keep class com.td.qianhai.epay.bb.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:414
+-keep class com.td.qianhai.epay.bb.MainActivitys { <init>(...); }
+
+# view AndroidManifest.xml #generated:422
+-keep class com.td.qianhai.epay.bb.MentionNowAcitvity { <init>(...); }
+
+# view AndroidManifest.xml #generated:334
+-keep class com.td.qianhai.epay.bb.MenuActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:529
+-keep class com.td.qianhai.epay.bb.MyBankCardAvtivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:472
+-keep class com.td.qianhai.epay.bb.MyCircleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:636
+-keep class com.td.qianhai.epay.bb.MyCircleActivity1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:779
+-keep class com.td.qianhai.epay.bb.MyFriendListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:576
+-keep class com.td.qianhai.epay.bb.MyProfitActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:619
+-keep class com.td.qianhai.epay.bb.MyProfitActivitys { <init>(...); }
+
+# view AndroidManifest.xml #generated:716
+-keep class com.td.qianhai.epay.bb.MyProxyReturnActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:696
+-keep class com.td.qianhai.epay.bb.MyQrcard { <init>(...); }
+
+# view AndroidManifest.xml #generated:142
+-keep class com.td.qianhai.epay.bb.NetworkRemindDialogActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:539
+-keep class com.td.qianhai.epay.bb.NewAgentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:501
+-keep class com.td.qianhai.epay.bb.NewRealNameAuthenticationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:418
+-keep class com.td.qianhai.epay.bb.OderOverDeteilActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:405
+-keep class com.td.qianhai.epay.bb.OnlineWeb { <init>(...); }
+
+# view AndroidManifest.xml #generated:467
+-keep class com.td.qianhai.epay.bb.OrderInfoAcitvity { <init>(...); }
+
+# view AndroidManifest.xml #generated:343
+-keep class com.td.qianhai.epay.bb.OrderPayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:506
+-keep class com.td.qianhai.epay.bb.PayMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:238
+-keep class com.td.qianhai.epay.bb.PhoneRechargeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:246
+-keep class com.td.qianhai.epay.bb.PhoneRechargeAffirmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:700
+-keep class com.td.qianhai.epay.bb.PhonereChargeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:692
+-keep class com.td.qianhai.epay.bb.PictureActivitys { <init>(...); }
+
+# view AndroidManifest.xml #generated:759
+-keep class com.td.qianhai.epay.bb.PointActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:520
+-keep class com.td.qianhai.epay.bb.PremiumUpgradeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:581
+-keep class com.td.qianhai.epay.bb.PromotionEarningActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:600
+-keep class com.td.qianhai.epay.bb.PurchaseProductsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:454
+-keep class com.td.qianhai.epay.bb.QrCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:450
+-keep class com.td.qianhai.epay.bb.RateListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:458
+-keep class com.td.qianhai.epay.bb.RateMianActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:199
+-keep class com.td.qianhai.epay.bb.RealNameAuthenticationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:755
+-keep class com.td.qianhai.epay.bb.RecommendeddetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:372
+-keep class com.td.qianhai.epay.bb.RegSetPayPassActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:175
+-keep class com.td.qianhai.epay.bb.RegetPasswordtwoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:377
+-keep class com.td.qianhai.epay.bb.RegetPayPwActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:170
+-keep class com.td.qianhai.epay.bb.RegetPwActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:166
+-keep class com.td.qianhai.epay.bb.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:151
+-keep class com.td.qianhai.epay.bb.RequestCardInfoChangeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:147
+-keep class com.td.qianhai.epay.bb.RequestPhonenumberChengesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:190
+-keep class com.td.qianhai.epay.bb.ReviseBankInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:180
+-keep class com.td.qianhai.epay.bb.RevisePasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:224
+-keep class com.td.qianhai.epay.bb.RevokePayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:352
+-keep class com.td.qianhai.epay.bb.RichTreasureActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:362
+-keep class com.td.qianhai.epay.bb.RichTreasureDealRecordsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:367
+-keep class com.td.qianhai.epay.bb.RichTreasureDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:610
+-keep class com.td.qianhai.epay.bb.SavpayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:740
+-keep class com.td.qianhai.epay.bb.ScreeningActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:631
+-keep class com.td.qianhai.epay.bb.SelectBankActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:347
+-keep class com.td.qianhai.epay.bb.SelectListNameActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:410
+-keep class com.td.qianhai.epay.bb.SetPayPassActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:705
+-keep class com.td.qianhai.epay.bb.ShouKuanBAvtivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:764
+-keep class com.td.qianhai.epay.bb.SubMyCircleActivity1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:254
+-keep class com.td.qianhai.epay.bb.SwipingPayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:534
+-keep class com.td.qianhai.epay.bb.TakeCreditCardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:322
+-keep class com.td.qianhai.epay.bb.TrainTicketActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:446
+-keep class com.td.qianhai.epay.bb.TransferAccountsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:357
+-keep class com.td.qianhai.epay.bb.UpdatePayPassActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:216
+-keep class com.td.qianhai.epay.bb.UploadSignActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:330
+-keep class com.td.qianhai.epay.bb.UserActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:769
+-keep class com.td.qianhai.epay.bb.WeChatRegistrActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:590
+-keep class com.td.qianhai.epay.bb.WebViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:750
+-keep class com.td.qianhai.epay.bb.WechatCollectionRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:559
+-keep class com.td.qianhai.epay.bb.WelcomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:385
+-keep class com.td.qianhai.epay.bb.WithdrawalActivity { <init>(...); }
+
+# view res/layout/activity_menu.xml #generated:355
+-keep class com.td.qianhai.epay.bb.adapter.VerticalViewPager { <init>(...); }
+
+# view res/layout/activity_menu.xml #generated:54
+# view res/layout/adgallery_hellper.xml #generated:6
+-keep class com.td.qianhai.epay.bb.advertising.AdGallery { <init>(...); }
+
+# view res/layout/activity_menu.xml #generated:69
+-keep class com.td.qianhai.epay.bb.advertising.Image3DSwitchView { <init>(...); }
+
+# view AndroidManifest.xml #generated:112
+-keep class com.td.qianhai.epay.bb.beans.AppContext { <init>(...); }
+
+# view res/layout/activity_contacts.xml #generated:73
+# view res/layout/friendlist_activity.xml #generated:117
+-keep class com.td.qianhai.epay.bb.contacts1.SideBar { <init>(...); }
+
+# view res/layout/choose_dialog.xml #generated:59
+# view res/layout/choose_dialog.xml #generated:65
+# view res/layout/choose_dialog.xml #generated:71
+# view res/layout/choose_dialog.xml #generated:77
+# view res/layout/choose_dialog.xml #generated:83
+-keep class com.td.qianhai.epay.bb.dateutil.WheelView { <init>(...); }
+
+# view AndroidManifest.xml #generated:710
+-keep class com.td.qianhai.epay.bb.push.CustomActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:930
+-keep class com.td.qianhai.epay.bb.push.MyReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:851
+-keep class com.td.qianhai.epay.bb.push.TestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:665
+-keep class com.td.qianhai.epay.bb.qrcode.CaptureActivity { <init>(...); }
+
+# view res/layout/logins_activity.xml #generated:28
+# view res/layout/setpassword_activity.xml #generated:23
+-keep class com.td.qianhai.epay.bb.unlock.LocusPassWordView { <init>(...); }
+
+# view AndroidManifest.xml #generated:430
+-keep class com.td.qianhai.epay.bb.unlock.SetUnlockPasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:434
+-keep class com.td.qianhai.epay.bb.unlock.UnlockActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:438
+-keep class com.td.qianhai.epay.bb.unlock.UnlockLoginActivity { <init>(...); }
+
+# view res/layout/cut_window1.xml #generated:22
+# view res/layout/cut_window3.xml #generated:41
+-keep class com.td.qianhai.epay.bb.views.CameraPreview { <init>(...); }
+
+# view res/layout/keyboard_layout.xml #generated:28
+-keep class com.td.qianhai.epay.bb.views.DashedLine { <init>(...); }
+
+# view res/layout/activity_picture.xml #generated:25
+-keep class com.td.qianhai.epay.bb.views.DragImageView { <init>(...); }
+
+# view res/layout/main_topbar.xml #generated:19
+-keep class com.td.qianhai.epay.bb.views.FontTextView { <init>(...); }
+
+# view res/layout/air_calender_item.xml #generated:33
+-keep class com.td.qianhai.epay.bb.views.KCalendar { <init>(...); }
+
+# view res/layout/air_city_list.xml #generated:117
+# view res/layout/contact_main.xml #generated:19
+-keep class com.td.qianhai.epay.bb.views.LetterListView { <init>(...); }
+
+# view res/layout/activity_balance.xml #generated:15
+-keep class com.td.qianhai.epay.bb.views.PullToRefreshLayout { <init>(...); }
+
+# view res/layout/layout_listviews.xml #generated:7
+# view res/layout/layout_listviews1.xml #generated:7
+-keep class com.td.qianhai.epay.bb.views.PullToRefreshListView { <init>(...); }
+
+# view res/layout/activity_balance.xml #generated:22
+-keep class com.td.qianhai.epay.bb.views.PullableScrollView { <init>(...); }
+
+# view res/layout/login_activity.xml #generated:117
+-keep class com.td.qianhai.epay.bb.views.ValidateImageView { <init>(...); }
+
+# view res/layout/datedialog_black_haveday.xml #generated:49
+# view res/layout/datedialog_black_haveday.xml #generated:56
+# view res/layout/datedialog_black_haveday.xml #generated:63
+-keep class com.td.qianhai.epay.bb.views.WheelView { <init>(...); }
+
+# view res/layout/authentication_activity2.xml #generated:211
+-keep class com.td.qianhai.epay.bb.views.city.CityPicker { <init>(...); }
+
+# view res/layout/city_picker.xml #generated:19
+# view res/layout/city_picker.xml #generated:36
+# view res/layout/city_picker.xml #generated:53
+-keep class com.td.qianhai.epay.bb.views.city.ScrollerNumberPicker { <init>(...); }
+
+# view res/layout/selectcompany_layout.xml #generated:16
+-keep class com.td.qianhai.epay.bb.views.sortlistview.ClearEditText { <init>(...); }
+
+# view res/layout/selectcompany_layout.xml #generated:55
+-keep class com.td.qianhai.epay.bb.views.sortlistview.SideBar { <init>(...); }
+
+# view AndroidManifest.xml #generated:658
+-keep class com.td.qianhai.epay.bb.wxapi.WXEntryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:338
+-keep class com.td.qianhai.fragmentmanager.FmMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:682
+-keep class com.tencent.connect.common.AssistActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:669
+-keep class com.tencent.tauth.AuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:651
+-keep class com.umeng.socialize.view.ShareActivity { <init>(...); }
+
+# view res/layout/umeng_socialize_post_share.xml #generated:2
+# view sw550dp-large-v13\res/layout-sw550dp-large-v13/umeng_socialize_post_share.xml #generated:2
+-keep class com.umeng.socialize.view.wigets.KeyboardListenRelativeLayout { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:21
+-keep class com.umeng.socialize.view.wigets.SearchBox { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:38
+-keep class com.umeng.socialize.view.wigets.SectionListView { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:47
+-keep class com.umeng.socialize.view.wigets.SlideBar { <init>(...); }
+
